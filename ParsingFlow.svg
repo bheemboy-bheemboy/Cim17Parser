@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 950" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="30" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">CIM17-CGMES 3.0 Parsing Process Flow</text>
+  
+  <!-- Main Phases -->
+  <!-- Phase 1: XML Processing -->
+  <rect x="50" y="70" width="1100" height="180" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5" ry="5" opacity="0.2"/>
+  <text x="100" y="90" font-family="Arial" font-size="18" font-weight="bold" fill="#1565c0">Phase 1: XML Processing</text>
+  
+  <!-- Phase 2: RDF Parsing -->
+  <rect x="50" y="260" width="1100" height="200" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5" ry="5" opacity="0.2"/>
+  <text x="100" y="280" font-family="Arial" font-size="18" font-weight="bold" fill="#2e7d32">Phase 2: RDF Parsing</text>
+  
+  <!-- Phase 3: CIM Model Construction -->
+  <rect x="50" y="470" width="1100" height="220" fill="#fff8e1" stroke="#f9a825" stroke-width="2" rx="5" ry="5" opacity="0.2"/>
+  <text x="100" y="490" font-family="Arial" font-size="18" font-weight="bold" fill="#f9a825">Phase 3: CIM Model Construction</text>
+  
+  <!-- Phase 4: Reference Resolution -->
+  <rect x="50" y="700" width="1100" height="180" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2" rx="5" ry="5" opacity="0.2"/>
+  <text x="100" y="720" font-family="Arial" font-size="18" font-weight="bold" fill="#6a1b9a">Phase 4: Reference Resolution</text>
+  
+  <!-- Flow elements -->
+  <!-- Start -->
+  <circle cx="600" cy="120" r="25" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
+  <text x="600" y="125" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Start</text>
+  
+  <!-- Load XML File -->
+  <rect x="530" y="170" width="140" height="50" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="5" ry="5"/>
+  <text x="600" y="200" font-family="Arial" font-size="14" text-anchor="middle">Load XML File</text>
+  
+  <!-- Decision: XML Valid? -->
+  <polygon points="600,250 640,290 600,330 560,290" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+  <text x="600" y="295" font-family="Arial" font-size="12" text-anchor="middle">XML Valid?</text>
+  
+  <!-- Error Handling -->
+  <rect x="750" y="265" width="140" height="50" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5" ry="5"/>
+  <text x="820" y="295" font-family="Arial" font-size="14" text-anchor="middle">Log Error</text>
+  
+  <!-- Determine CGMES Profile -->
+  <rect x="530" y="350" width="140" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5" ry="5"/>
+  <text x="600" y="375" font-family="Arial" font-size="14" text-anchor="middle">Determine Profile</text>
+  
+  <!-- Process RDF Data -->
+  <rect x="530" y="430" width="140" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5" ry="5"/>
+  <text x="600" y="455" font-family="Arial" font-size="14" text-anchor="middle">Process RDF Data</text>
+  
+  <!-- Create Model Objects -->
+  <rect x="530" y="520" width="140" height="50" fill="#ffecb3" stroke="#ffa000" stroke-width="2" rx="5" ry="5"/>
+  <text x="600" y="545" font-family="Arial" font-size="14" text-anchor="middle">Create Model Objects</text>
+  
+  <!-- Model Subprocesses -->
+  <!-- Process Equipment -->
+  <rect x="300" y="520" width="140" height="50" fill="#ffecb3" stroke="#ffa000" stroke-width="2" rx="5" ry="5"/>
+  <text x="370" y="545" font-family="Arial" font-size="14" text-anchor="middle">Process Equipment</text>
+  
+  <!-- Process Topology -->
+  <rect x="760" y="520" width="140" height="50" fill="#ffecb3" stroke="#ffa000" stroke-width="2" rx="5" ry="5"/>
+  <text x="830" y="545" font-family="Arial" font-size="14" text-anchor="middle">Process Topology</text>
+  
+  <!-- Equipment Details -->
+  <rect x="180" y="590" width="140" height="50" fill="#ffecb3" stroke="#ffa000" stroke-width="2" rx="5" ry="5"/>
+  <text x="250" y="615" font-family="Arial" font-size="12" text-anchor="middle">Transmission Equip.</text>
+  
+  <rect x="330" y="590" width="140" height="50" fill="#ffecb3" stroke="#ffa000" stroke-width="2" rx="5" ry="5"/>
+  <text x="400" y="615" font-family="Arial" font-size="12" text-anchor="middle">Generation Equip.</text>
+  
+  <rect x="480" y="590" width="140" height="50" fill="#ffecb3" stroke="#ffa000" stroke-width="2" rx="5" ry="5"/>
+  <text x="550" y="615" font-family="Arial" font-size="12" text-anchor="middle">Renewable Equip.</text>
+
+  <rect x="630" y="590" width="140" height="50" fill="#ffecb3" stroke="#ffa000" stroke-width="2" rx="5" ry="5"/>
+  <text x="700" y="615" font-family="Arial" font-size="12" text-anchor="middle">Load Compensation</text>
+  
+  <rect x="780" y="590" width="140" height="50" fill="#ffecb3" stroke="#ffa000" stroke-width="2" rx="5" ry="5"/>
+  <text x="850" y="615" font-family="Arial" font-size="12" text-anchor="middle">Connectivity Nodes</text>
+  
+  <rect x="930" y="590" width="140" height="50" fill="#ffecb3" stroke="#ffa000" stroke-width="2" rx="5" ry="5"/>
+  <text x="1000" y="615" font-family="Arial" font-size="12" text-anchor="middle">Terminals</text>
+  
+  <!-- Resolve Equipment References -->
+  <rect x="350" y="750" width="200" height="50" fill="#e1bee7" stroke="#8e24aa" stroke-width="2" rx="5" ry="5"/>
+  <text x="450" y="775" font-family="Arial" font-size="14" text-anchor="middle">Resolve Equipment Refs</text>
+  
+  <!-- Resolve Terminal References -->
+  <rect x="650" y="750" width="200" height="50" fill="#e1bee7" stroke="#8e24aa" stroke-width="2" rx="5" ry="5"/>
+  <text x="750" y="775" font-family="Arial" font-size="14" text-anchor="middle">Resolve Terminal Refs</text>
+  
+  <!-- Decision: All References Resolved? -->
+  <polygon points="600,830 640,870 600,910 560,870" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="600" y="875" font-family="Arial" font-size="12" text-anchor="middle">References Resolved?</text>
+  
+  <!-- End -->
+  <circle cx="600" cy="950" r="25" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
+  <text x="600" y="955" font-family="Arial" font-size="14" text-anchor="middle" fill="white">End</text>
+  
+  <!-- Return Value Processing -->
+  <rect x="750" y="850" width="140" height="50" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5" ry="5"/>
+  <text x="820" y="875" font-family="Arial" font-size="14" text-anchor="middle">Return Errors</text>
+  
+  <!-- Connecting Lines -->
+  <!-- Start to Load XML -->
+  <line x1="600" y1="145" x2="600" y2="170" stroke="#666666" stroke-width="2"/>
+  <polygon points="600,170 595,160 605,160" fill="#666666"/>
+  
+  <!-- Load XML to Decision -->
+  <line x1="600" y1="220" x2="600" y2="250" stroke="#666666" stroke-width="2"/>
+  <polygon points="600,250 595,240 605,240" fill="#666666"/>
+  
+  <!-- Decision to Error -->
+  <line x1="640" y1="290" x2="750" y2="290" stroke="#666666" stroke-width="2"/>
+  <polygon points="750,290 740,285 740,295" fill="#666666"/>
+  <text x="670" y="280" font-family="Arial" font-size="12" fill="#666666">No</text>
+  
+  <!-- Decision to Determine Profile -->
+  <line x1="600" y1="330" x2="600" y2="350" stroke="#666666" stroke-width="2"/>
+  <polygon points="600,350 595,340 605,340" fill="#666666"/>
+  <text x="610" y="340" font-family="Arial" font-size="12" fill="#666666">Yes</text>
+  
+  <!-- Determine Profile to Process RDF -->
+  <line x1="600" y1="400" x2="600" y2="430" stroke="#666666" stroke-width="2"/>
+  <polygon points="600,430 595,420 605,420" fill="#666666"/>
+  
+  <!-- Process RDF to Create Objects -->
+  <line x1="600" y1="480" x2="600" y2="520" stroke="#666666" stroke-width="2"/>
+  <polygon points="600,520 595,510 605,510" fill="#666666"/>
+  
+  <!-- Create Model Objects to Subprocesses -->
+  <line x1="530" y1="545" x2="440" y2="545" stroke="#666666" stroke-width="2"/>
+  <polygon points="440,545 450,540 450,550" fill="#666666"/>
+  
+  <line x1="670" y1="545" x2="760" y2="545" stroke="#666666" stroke-width="2"/>
+  <polygon points="760,545 750,540 750,550" fill="#666666"/>
+  
+  <!-- Process Equipment to Details -->
+  <path d="M 370 570 C 370 580 250 580 250 590" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="250,590 255,580 245,580" fill="#666666"/>
+  
+  <path d="M 370 570 C 370 580 400 580 400 590" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="400,590 405,580 395,580" fill="#666666"/>
+  
+  <path d="M 370 570 C 370 580 550 580 550 590" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="550,590 555,580 545,580" fill="#666666"/>
+  
+  <!-- Process Topology to Details -->
+  <path d="M 830 570 C 830 580 700 580 700 590" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="700,590 705,580 695,580" fill="#666666"/>
+  
+  <path d="M 830 570 C 830 580 850 580 850 590" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="850,590 855,580 845,580" fill="#666666"/>
+  
+  <path d="M 830 570 C 830 580 1000 580 1000 590" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="1000,590 1005,580 995,580" fill="#666666"/>
+  
+  <!-- All Details to Reference Resolution -->
+  <path d="M 250 640 C 250 700 450 700 450 750" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="450,750 445,740 455,740" fill="#666666"/>
+  
+  <path d="M 400 640 C 400 700 450 700 450 750" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="450,750 445,740 455,740" fill="#666666"/>
+  
+  <path d="M 550 640 C 550 700 450 700 450 750" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="450,750 445,740 455,740" fill="#666666"/>
+  
+  <path d="M 700 640 C 700 700 450 700 450 750" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="450,750 445,740 455,740" fill="#666666"/>
+  
+  <path d="M 850 640 C 850 700 750 700 750 750" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="750,750 745,740 755,740" fill="#666666"/>
+  
+  <path d="M 1000 640 C 1000 700 750 700 750 750" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="750,750 745,740 755,740" fill="#666666"/>
+  
+  <!-- Resolve References to Decision -->
+  <path d="M 450 800 C 450 815 600 815 600 830" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="600,830 595,820 605,820" fill="#666666"/>
+  
+  <path d="M 750 800 C 750 815 600 815 600 830" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="600,830 595,820 605,820" fill="#666666"/>
+  
+  <!-- Decision to End/Error -->
+  <line x1="600" y1="910" x2="600" y2="925" stroke="#666666" stroke-width="2"/>
+  <polygon points="600,925 595,915 605,915" fill="#666666"/>
+  <text x="610" y="920" font-family="Arial" font-size="12" fill="#666666">Yes</text>
+  
+  <line x1="640" y1="870" x2="750" y2="870" stroke="#666666" stroke-width="2"/>
+  <polygon points="750,870 740,865 740,875" fill="#666666"/>
+  <text x="670" y="860" font-family="Arial" font-size="12" fill="#666666">No</text>
+  
+  <!-- Error to End -->
+  <path d="M 820 900 C 820 925 625 925 600 940" stroke="#666666" stroke-width="2" fill="none"/>
+  <polygon points="600,940 605,930 595,930" fill="#666666"/>
+  
+  <!-- Processing Descriptions -->
+  <!-- XML Processing Description -->
+  <rect x="100" y="160" width="300" height="80" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1" rx="5" ry="5"/>
+  <text x="110" y="175" font-family="Arial" font-size="12" font-weight="bold">XML Processing</text>
+  <text x="110" y="195" font-family="Arial" font-size="11">• Validate XML against CIM17 schemas</text>
+  <text x="110" y="215" font-family="Arial" font-size="11">• Extract namespaces and prefixes</text>
+  <text x="110" y="235" font-family="Arial" font-size="11">• Detect CGMES profile from namespace URIs</text>
+  
+  <!-- RDF Processing Description -->
+  <rect x="900" y="350" width="250" height="80" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1" rx="5" ry="5"/>
+  <text x="910" y="365" font-family="Arial" font-size="12" font-weight="bold">RDF Processing</text>
+  <text x="910" y="385" font-family="Arial" font-size="11">• Extract RDF:about/ID for unique identifiers</text>
+  <text x="910" y="405" font-family="Arial" font-size="11">• Parse RDF:type to determine class types</text>
+  <text x="910" y="425" font-family="Arial" font-size="11">• Handle RDF resources and references</text>
+  
+  <!-- Model Construction Description -->
+  <rect x="100" y="480" width="250" height="80" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1" rx="5" ry="5"/>
+  <text x="110" y="495" font-family="Arial" font-size="12" font-weight="bold">Model Construction</text>
+  <text x="110" y="515" font-family="Arial" font-size="11">• Create objects with correct type mapping</text>
+  <text x="110" y="535" font-family="Arial" font-size="11">• Set attributes from RDF properties</text>
+  <text x="110" y="555" font-family="Arial" font-size="11">• Store references for later resolution</text>
+  
+  <!-- Reference Resolution Description -->
+  <rect x="100" y="760" width="250" height="80" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1" rx="5" ry="5"/>
+  <text x="110" y="775" font-family="Arial" font-size="12" font-weight="bold">Reference Resolution</text>
+  <text x="110" y="795" font-family="Arial" font-size="11">• Connect terminals to equipment</text>
+  <text x="110" y="815" font-family="Arial" font-size="11">• Link terminals to connectivity nodes</text>
+  <text x="110" y="835" font-family="Arial" font-size="11">• Build complete network topology</text>
+</svg>
