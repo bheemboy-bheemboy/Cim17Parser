@@ -1,0 +1,320 @@
+<svg viewBox="0 0 1300 1500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <style>
+    .class-box {
+      fill: #f0f7ff;
+      stroke: #2c5aa0;
+      stroke-width: 2;
+    }
+    .class-name {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      text-anchor: middle;
+      fill: #2c5aa0;
+    }
+    .class-attrs {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: start;
+    }
+    .new-attr {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: start;
+      fill: #00a050;
+      font-weight: bold;
+    }
+    .relationship {
+      stroke: #2c5aa0;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .inheritance {
+      stroke: #2c5aa0;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#inheritance);
+    }
+    .association {
+      stroke: #2c5aa0;
+      stroke-width: 2;
+      stroke-dasharray: 5,5;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .relationship-label {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+      fill: #2c5aa0;
+    }
+    .legend {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    .section-title {
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      fill: #2c5aa0;
+    }
+    .new-class {
+      fill: #e6ffe6;
+      stroke: #00a050;
+      stroke-width: 2;
+    }
+    .new-class-name {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      text-anchor: middle;
+      fill: #00a050;
+    }
+  </style>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c5aa0" />
+    </marker>
+    <marker id="inheritance" markerWidth="12" markerHeight="10" refX="12" refY="5" orient="auto">
+      <polygon points="0 0, 12 5, 0 10" fill="white" stroke="#2c5aa0" stroke-width="1" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="650" y="30" class="section-title" text-anchor="middle">CIM17 (CGMES 3.0) Class Diagram</text>
+  
+  <!-- Legend -->
+  <rect x="1050" y="50" width="220" height="90" rx="5" fill="white" stroke="#333" />
+  <text x="1060" y="70" class="legend">Legend:</text>
+  <rect x="1060" y="80" width="20" height="15" fill="#f0f7ff" stroke="#2c5aa0" />
+  <text x="1090" y="93" class="legend">Existing Class</text>
+  <rect x="1060" y="105" width="20" height="15" fill="#e6ffe6" stroke="#00a050" />
+  <text x="1090" y="118" class="legend">New Class in CIM17</text>
+  <text x="1060" y="140" class="new-attr">Green Bold Text</text>
+  <text x="1200" y="140" class="legend">New in CIM17</text>
+  
+  <!-- Base Classes -->
+  <!-- IdentifiedObject -->
+  <rect x="650" y="75" width="220" height="150" rx="5" class="class-box" />
+  <text x="760" y="100" class="class-name">IdentifiedObject</text>
+  <line x1="650" y1="110" x2="870" y2="110" stroke="#2c5aa0" stroke-width="2" />
+  <text x="660" y="128" class="class-attrs">+ mRID: String</text>
+  <text x="660" y="144" class="class-attrs">+ name: String</text>
+  <text x="660" y="160" class="class-attrs">+ description: String</text>
+  <text x="660" y="176" class="class-attrs">+ aliasName: String</text>
+  <text x="660" y="192" class="class-attrs">+ shortName: String</text>
+  <text x="660" y="208" class="new-attr">+ energyIdentCodeEic: String</text>
+  
+  <!-- PowerSystemResource -->
+  <rect x="650" y="275" width="220" height="150" rx="5" class="class-box" />
+  <text x="760" y="300" class="class-name">PowerSystemResource</text>
+  <line x1="650" y1="310" x2="870" y2="310" stroke="#2c5aa0" stroke-width="2" />
+  <text x="660" y="328" class="class-attrs">+ Location: Location</text>
+  <text x="660" y="344" class="class-attrs">+ PSRType: PSRType</text>
+  <text x="660" y="360" class="class-attrs">+ Measurements: Measurement</text>
+  <text x="660" y="376" class="class-attrs">+ customType: String</text>
+  <text x="660" y="392" class="new-attr">+ assetDatasheet: AssetDatasheet</text>
+  <text x="660" y="408" class="new-attr">+ networkAnalysisEnabled: Boolean</text>
+  
+  <!-- Equipment -->
+  <rect x="650" y="475" width="220" height="170" rx="5" class="class-box" />
+  <text x="760" y="500" class="class-name">Equipment</text>
+  <line x1="650" y1="510" x2="870" y2="510" stroke="#2c5aa0" stroke-width="2" />
+  <text x="660" y="528" class="class-attrs">+ inService: Boolean</text>
+  <text x="660" y="544" class="class-attrs">+ normallyInService: Boolean</text>
+  <text x="660" y="560" class="class-attrs">+ aggregate: Boolean</text>
+  <text x="660" y="576" class="class-attrs">+ EquipmentContainer: EquipmentContainer</text>
+  <text x="660" y="592" class="class-attrs">+ OperationalLimitSet: OperationalLimitSet</text>
+  <text x="660" y="608" class="new-attr">+ maintenanceInfo: MaintenanceInfo</text>
+  <text x="660" y="624" class="new-attr">+ lifecycleState: Enumeration</text>
+  <text x="660" y="640" class="new-attr">+ healthStatus: HealthStatus</text>
+  
+  <!-- ConductingEquipment -->
+  <rect x="650" y="695" width="220" height="170" rx="5" class="class-box" />
+  <text x="760" y="720" class="class-name">ConductingEquipment</text>
+  <line x1="650" y1="730" x2="870" y2="730" stroke="#2c5aa0" stroke-width="2" />
+  <text x="660" y="748" class="class-attrs">+ BaseVoltage: BaseVoltage</text>
+  <text x="660" y="764" class="class-attrs">+ Terminals: Terminal</text>
+  <text x="660" y="780" class="class-attrs">+ SvStatus: SvStatus</text>
+  <text x="660" y="796" class="new-attr">+ phaseConnection: PhaseShuntConnectionKind</text>
+  <text x="660" y="812" class="new-attr">+ ratedCurrent: CurrentFlow</text>
+  <text x="660" y="828" class="new-attr">+ shortCircuitRating: CurrentFlow</text>
+  <text x="660" y="844" class="new-attr">+ thermalRating: ThermalRating</text>
+  
+  <!-- Network Classes -->
+  <!-- Terminal -->
+  <rect x="950" y="475" width="220" height="170" rx="5" class="class-box" />
+  <text x="1060" y="500" class="class-name">Terminal</text>
+  <line x1="950" y1="510" x2="1170" y2="510" stroke="#2c5aa0" stroke-width="2" />
+  <text x="960" y="528" class="class-attrs">+ ConductingEquipment: ConductingEquipment</text>
+  <text x="960" y="544" class="class-attrs">+ ConnectivityNode: ConnectivityNode</text>
+  <text x="960" y="560" class="class-attrs">+ phases: PhaseCode</text>
+  <text x="960" y="576" class="class-attrs">+ sequenceNumber: Integer</text>
+  <text x="960" y="592" class="class-attrs">+ connected: Boolean</text>
+  <text x="960" y="608" class="new-attr">+ branching: Boolean</text>
+  <text x="960" y="624" class="new-attr">+ operationalLimitSet: OperationalLimitSet</text>
+  <text x="960" y="640" class="new-attr">+ normalOpen: Boolean</text>
+  
+  <!-- ConnectivityNode -->
+  <rect x="950" y="695" width="220" height="150" rx="5" class="class-box" />
+  <text x="1060" y="720" class="class-name">ConnectivityNode</text>
+  <line x1="950" y1="730" x2="1170" y2="730" stroke="#2c5aa0" stroke-width="2" />
+  <text x="960" y="748" class="class-attrs">+ ConnectivityNodeContainer: ConnectivityNodeContainer</text>
+  <text x="960" y="764" class="class-attrs">+ Terminals: Terminal</text>
+  <text x="960" y="780" class="class-attrs">+ boundaryPoint: Boolean</text>
+  <text x="960" y="796" class="class-attrs">+ fromEndIsoCode: String</text>
+  <text x="960" y="812" class="new-attr">+ topologicalIsland: TopologicalIsland</text>
+  <text x="960" y="828" class="new-attr">+ networkType: Enumeration</text>
+  
+  <!-- Transmission Equipment -->
+  <!-- ACLineSegment -->
+  <rect x="350" y="895" width="220" height="170" rx="5" class="class-box" />
+  <text x="460" y="920" class="class-name">ACLineSegment</text>
+  <line x1="350" y1="930" x2="570" y2="930" stroke="#2c5aa0" stroke-width="2" />
+  <text x="360" y="948" class="class-attrs">+ r: Float</text>
+  <text x="360" y="964" class="class-attrs">+ x: Float</text>
+  <text x="360" y="980" class="class-attrs">+ bch: Float</text>
+  <text x="360" y="996" class="class-attrs">+ length: Float</text>
+  <text x="360" y="1012" class="class-attrs">+ PerLengthImpedance: PerLengthImpedance</text>
+  <text x="360" y="1028" class="new-attr">+ shortCircuitEndTemperature: Float</text>
+  <text x="360" y="1044" class="new-attr">+ lineLoadability: LineLoadability</text>
+  <text x="360" y="1060" class="new-attr">+ dynamicLineRating: DynamicLineRating</text>
+  
+  <!-- PowerTransformer -->
+  <rect x="650" y="895" width="220" height="170" rx="5" class="class-box" />
+  <text x="760" y="920" class="class-name">PowerTransformer</text>
+  <line x1="650" y1="930" x2="870" y2="930" stroke="#2c5aa0" stroke-width="2" />
+  <text x="660" y="948" class="class-attrs">+ vectorGroup: String</text>
+  <text x="660" y="964" class="class-attrs">+ transformerType: TransformerType</text>
+  <text x="660" y="980" class="class-attrs">+ PowerTransformerEnd: PowerTransformerEnd</text>
+  <text x="660" y="996" class="class-attrs">+ autotransformer: Boolean</text>
+  <text x="660" y="1012" class="new-attr">+ operationalValuesConsidered: Boolean</text>
+  <text x="660" y="1028" class="new-attr">+ constructionType: Enumeration</text>
+  <text x="660" y="1044" class="new-attr">+ coreMagnetizationType: CoreMagnetizationType</text>
+  <text x="660" y="1060" class="new-attr">+ coolingType: CoolingType</text>
+  
+  <!-- Switch -->
+  <rect x="950" y="895" width="220" height="160" rx="5" class="class-box" />
+  <text x="1060" y="920" class="class-name">Switch</text>
+  <line x1="950" y1="930" x2="1170" y2="930" stroke="#2c5aa0" stroke-width="2" />
+  <text x="960" y="948" class="class-attrs">+ normalOpen: Boolean</text>
+  <text x="960" y="964" class="class-attrs">+ open: Boolean</text>
+  <text x="960" y="980" class="class-attrs">+ retained: Boolean</text>
+  <text x="960" y="996" class="class-attrs">+ switchOnCount: Integer</text>
+  <text x="960" y="1012" class="new-attr">+ ratedCurrent: CurrentFlow</text>
+  <text x="960" y="1028" class="new-attr">+ switchOperationMode: SwitchOperationMode</text>
+  <text x="960" y="1044" class="new-attr">+ remoteSwitchingAllowed: Boolean</text>
+  <text x="960" y="1060" class="new-attr">+ loadBreak: Boolean</text>
+  
+  <!-- Generation Equipment -->
+  <!-- SynchronousMachine -->
+  <rect x="350" y="1115" width="220" height="170" rx="5" class="class-box" />
+  <text x="460" y="1140" class="class-name">SynchronousMachine</text>
+  <line x1="350" y1="1150" x2="570" y2="1150" stroke="#2c5aa0" stroke-width="2" />
+  <text x="360" y="1168" class="class-attrs">+ type: SynchronousMachineType</text>
+  <text x="360" y="1184" class="class-attrs">+ operatingMode: SynchMachineOperatingMode</text>
+  <text x="360" y="1200" class="class-attrs">+ maxQ: ReactivePower</text>
+  <text x="360" y="1216" class="class-attrs">+ minQ: ReactivePower</text>
+  <text x="360" y="1232" class="class-attrs">+ referencePriority: Integer</text>
+  <text x="360" y="1248" class="new-attr">+ voltageRegulationRange: PerCent</text>
+  <text x="360" y="1264" class="new-attr">+ inertia: Seconds</text>
+  <text x="360" y="1280" class="new-attr">+ damping: Float</text>
+  
+  <!-- New Classes in CIM17 -->
+  <!-- GridFormingConverter -->
+  <rect x="650" y="1115" width="220" height="170" rx="5" class="new-class" />
+  <text x="760" y="1140" class="new-class-name">GridFormingConverter</text>
+  <line x1="650" y1="1150" x2="870" y2="1150" stroke="#00a050" stroke-width="2" />
+  <text x="660" y="1168" class="new-attr">+ nominalS: ApparentPower</text>
+  <text x="660" y="1184" class="new-attr">+ maxS: ApparentPower</text>
+  <text x="660" y="1200" class="new-attr">+ regulationMode: GridFormingMode</text>
+  <text x="660" y="1216" class="new-attr">+ virtualInertia: Seconds</text>
+  <text x="660" y="1232" class="new-attr">+ activeDroopR: PerCent</text>
+  <text x="660" y="1248" class="new-attr">+ reactiveDroopX: PerCent</text>
+  <text x="660" y="1264" class="new-attr">+ gridFormingStatus: Boolean</text>
+  <text x="660" y="1280" class="new-attr">+ blackStartCapable: Boolean</text>
+  
+  <!-- HVDCLine -->
+  <rect x="950" y="1115" width="220" height="150" rx="5" class="new-class" />
+  <text x="1060" y="1140" class="new-class-name">HVDCLine</text>
+  <line x1="950" y1="1150" x2="1170" y2="1150" stroke="#00a050" stroke-width="2" />
+  <text x="960" y="1168" class="new-attr">+ ratedCurrent: CurrentFlow</text>
+  <text x="960" y="1184" class="new-attr">+ resistance: Resistance</text>
+  <text x="960" y="1200" class="new-attr">+ length: Length</text>
+  <text x="960" y="1216" class="new-attr">+ type: HVDCLineType</text>
+  <text x="960" y="1232" class="new-attr">+ hvdcEndpoint1: HVDCConverterStation</text>
+  <text x="960" y="1248" class="new-attr">+ hvdcEndpoint2: HVDCConverterStation</text>
+  
+  <!-- Renewable Energy Resources -->
+  <!-- BatteryUnit -->
+  <rect x="350" y="1335" width="220" height="170" rx="5" class="new-class" />
+  <text x="460" y="1360" class="new-class-name">BatteryUnit</text>
+  <line x1="350" y1="1370" x2="570" y2="1370" stroke="#00a050" stroke-width="2" />
+  <text x="360" y="1388" class="new-attr">+ batteryState: BatteryState</text>
+  <text x="360" y="1404" class="new-attr">+ ratedE: ActiveEnergy</text>
+  <text x="360" y="1420" class="new-attr">+ storedE: ActiveEnergy</text>
+  <text x="360" y="1436" class="new-attr">+ batteryType: BatteryType</text>
+  <text x="360" y="1452" class="new-attr">+ maxChargingRate: ActivePower</text>
+  <text x="360" y="1468" class="new-attr">+ maxDischargingRate: ActivePower</text>
+  <text x="360" y="1484" class="new-attr">+ stateOfCharge: PerCent</text>
+  <text x="360" y="1500" class="new-attr">+ roundTripEfficiency: PerCent</text>
+  
+  <!-- SolarGeneratingUnit -->
+  <rect x="650" y="1335" width="220" height="170" rx="5" class="class-box" />
+  <text x="760" y="1360" class="class-name">SolarGeneratingUnit</text>
+  <line x1="650" y1="1370" x2="870" y2="1370" stroke="#2c5aa0" stroke-width="2" />
+  <text x="660" y="1388" class="class-attrs">+ area: Area</text>
+  <text x="660" y="1404" class="class-attrs">+ panelType: SolarPanelType</text>
+  <text x="660" y="1420" class="class-attrs">+ maxTempDesignLimit: Temperature</text>
+  <text x="660" y="1436" class="class-attrs">+ minTempDesignLimit: Temperature</text>
+  <text x="660" y="1452" class="new-attr">+ moduleEfficiency: PerCent</text>
+  <text x="660" y="1468" class="new-attr">+ installationType: SolarInstallationType</text>
+  <text x="660" y="1484" class="new-attr">+ orientationAzimuth: AngleDegrees</text>
+  <text x="660" y="1500" class="new-attr">+ trackingType: SolarTrackingKind</text>
+  
+  <!-- WindGeneratingUnit -->
+  <rect x="950" y="1335" width="220" height="170" rx="5" class="class-box" />
+  <text x="1060" y="1360" class="class-name">WindGeneratingUnit</text>
+  <line x1="950" y1="1370" x2="1170" y2="1370" stroke="#2c5aa0" stroke-width="2" />
+  <text x="960" y="1388" class="class-attrs">+ windType: WindType</text>
+  <text x="960" y="1404" class="class-attrs">+ nominalP: ActivePower</text>
+  <text x="960" y="1420" class="class-attrs">+ maxP: ActivePower</text>
+  <text x="960" y="1436" class="class-attrs">+ minP: ActivePower</text>
+  <text x="960" y="1452" class="new-attr">+ hubHeight: Length</text>
+  <text x="960" y="1468" class="new-attr">+ rotorDiameter: Length</text>
+  <text x="960" y="1484" class="new-attr">+ cutInSpeed: Speed</text>
+  <text x="960" y="1500" class="new-attr">+ cutOutSpeed: Speed</text>
+
+  <!-- Inheritance Relationships -->
+  <path d="M 760 225 L 760 275" class="inheritance" />
+  <path d="M 760 425 L 760 475" class="inheritance" />
+  <path d="M 760 645 L 760 695" class="inheritance" />
+  <path d="M 1060 225 L 1060 475" class="inheritance" />
+  
+  <path d="M 460 895 L 460 825 L 650 825" class="inheritance" />
+  <path d="M 760 865 L 760 865" class="inheritance" />
+  <path d="M 1060 895 L 1060 825 L 870 825" class="inheritance" />
+  
+  <path d="M 460 1115 L 460 1080 L 580 1080 L 580 825 L 650 825" class="inheritance" />
+  <path d="M 760 1115 L 760 1080 L 580 1080" class="inheritance" />
+  
+  <path d="M 950 1115 L 840 1115 L 840 1080 L 580 1080" class="inheritance" />
+  
+  <path d="M 460 1335 L 460 1300 L 580 1300 L 580 1080" class="inheritance" />
+  <path d="M 760 1335 L 760 1300 L 580 1300" class="inheritance" />
+  <path d="M 1060 1335 L 1060 1300 L 580 1300" class="inheritance" />
+  
+  <!-- Associations -->
+  <path d="M 870 780 L 950 560" class="association" />
+  <text x="910" y="670" class="relationship-label">connects</text>
+  
+  <path d="M 870 995 L 900 995 L 900 1030 L 950 1030" class="association" />
+  <text x="910" y="985" class="relationship-label">uses</text>
+  
+  <path d="M 950 1220 L 870 1220" class="association" />
+  <text x="910" y="1210" class="relationship-label">connects</text>
+</svg>
